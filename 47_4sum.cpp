@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 class Solution {
-    // glt hai
+   
     
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
