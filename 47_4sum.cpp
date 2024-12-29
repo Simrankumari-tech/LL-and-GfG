@@ -15,7 +15,7 @@ public:
                  
                 int k=j+1 , l=n-1;
                 while(k<l){
-                    int sum = nums[i]+nums[j]+nums[k]+nums[l];
+                    long long sum =(long long) nums[i]+nums[j]+nums[k]+nums[l];
                     
                     if(sum == target){
                         ans.push_back({nums[i] , nums[j] , nums[k] , nums[l]});
@@ -31,3 +31,16 @@ public:
         return ans;
     }
 };
+int main(){
+    vector<int>nums = {1,0,-1,0,-2,2};
+    Solution sol;
+    int target=0;
+    vector<vector<int>>result= sol.fourSum(nums, target); 
+    for(auto&quadruple : result){
+        for(int data :quadruple){
+            cout << data << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
